@@ -1,0 +1,12 @@
+type RNC{
+    _id: ID!
+    name: String!
+}
+
+type Query{
+    getAllRnc: [RNC!]!
+}
+
+type Mutation{
+    createRnc(name:String!): RNC!
+}

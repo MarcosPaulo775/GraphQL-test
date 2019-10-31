@@ -1,0 +1,34 @@
+# import Options from "./utils.graphql"
+
+type User{
+    _id: ID!,
+    username: String!,
+    fullname: String!,
+    password: String!,
+    email: String!,
+    permissions: [String!]!,
+    attributes: [String!]!,
+    city: [String!]!,
+    empresa: String,
+    home: String!,
+    type: String!,
+    terceiro: String
+}
+
+type Query{
+    listUsers(options: Options): [User!]!
+    getAllUsers: [User!]!
+    getUserById(_id: ID!): User
+}
+
+type Mutation{
+    createUser(username: String!, fullname: String!, password: String!, email: String!, 
+        permissions:[String!]!, 
+        attributes: [String!]!,
+        city: [String!]!,
+        empresa: String,
+        home: String!,
+        type: String!,
+        terceiro: String
+        ): User!
+}

@@ -1,0 +1,7 @@
+input Options{
+    sort: String,
+    order: Int,
+    page: Int,
+    limit: Int,
+    search: String
+}
